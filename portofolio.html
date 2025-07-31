@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parina's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #e0f7fa, #f7f9fc);
+      color: #333;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .dark-theme {
+      background: linear-gradient(135deg, #1e1e2f, #0f0f1b);
+      color: #f5f6fa;
+    }
+
+    .dark-theme .header,
+    .dark-theme .footer {
+      background-color: #2f80ed;
+      color: #fff;
+    }
+
+    .dark-theme .btn {
+      background-color: #56cc9d;
+      color: #000;
+    }
+
+    .dark-theme .btn-secondary {
+      background-color: #6c5ce7;
+      color: #fff;
+    }
+
+    .dark-theme .nav a {
+      color: #fff;
+    }
+
+    .dark-theme .nav a:hover {
+      color: #ffd166;
+    }
+
+    .dark-theme .tech-logos img {
+      filter: brightness(0.9);
+    }
+
+    .header, .footer {
+      background-color: #2f80ed;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd166;
+    }
+
+    .hero {
+      min-height: 55vh;
+      padding: 5rem 2rem;
+      text-align: center;
+      background: url('bg.jpeg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dark-theme .hero {
+      color: #fff;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg.jpeg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      backdrop-filter: blur(5px);
+    }
+
+    .highlight {
+      color: #2f80ed;
+    }
+
+    .cta-buttons {
+      margin-top: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .btn, .btn-secondary {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn {
+      background-color: #56cc9d;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: #6c5ce7;
+      color: white;
+    }
+
+    .btn:hover, .btn-secondary:hover {
+      transform: scale(1.05);
+    }
+
+    .tech-logos {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.5s ease-out 0.5s forwards;
+    }
+
+    .tech-logos img {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-logos img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .cta-box {
+      background: rgba(10, 25, 47, 0.85);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
+    }
+
+    .dark-theme .cta-box {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    #themeToggle {
+      border: none;
+      background: #eee;
+      border-radius: 10px;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: background 0.5s ease;
+    }
+
+    #themeToggle:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Parina Garg</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="portofolio.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm <span class="highlight">Parina Garg</span></h1>
+    <p class="tagline">A passionate designer & developer 💫</p>
+    <div class="cta-box">
+      <a href="projects.html" class="btn">View Projects</a>
+      <a href="resume.html" class="btn-secondary">Download Resume</a>
+    </div>
+
+    <div class="tech-logos">
+      <img src="aws.png" alt="AWS" />
+      <img src="python.png" alt="Python" />
+      <img src="canva.jpg" alt="Canva" />
+      <img src="html.jpg" alt="HTML" />
+      <img src="css.png" alt="CSS" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Parina Garg. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle('dark-theme');
+      toggleBtn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    };
+  </script>
+</body>
+</html>

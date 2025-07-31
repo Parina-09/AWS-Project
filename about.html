@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Parina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('bg.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      padding: 2rem;
+    }
+
+    .dark-theme {
+      background: linear-gradient(135deg, #1e1e2f, #0f0f1b) !important;
+      color: #f5f6fa;
+    }
+
+    .header {
+      background-color: #2f80ed;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #themeToggle {
+      background: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000; /* solid black */
+  text-shadow: 
+    2px 2px 6px #ffffff,  /* white soft glow */
+    0 0 12px #2f80ed;     /* blue outer glow */
+  margin-bottom: 2rem;
+  animation: fadeDown 1s ease-in-out;
+}
+
+
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .section-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .section-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #2f80ed;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .fun-facts {
+      background: rgba(255,255,255,0.85);
+      padding: 1rem;
+      border-left: 5px solid #6c5ce7;
+      border-radius: 10px;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #2f80ed;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: #56cc9d;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 1rem;
+      background: #f0f0f0;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #2f80ed;
+      color: white;
+      border-radius: 12px;
+    }
+.dark-theme .section-box,
+.dark-theme .fun-facts,
+.dark-theme .tab-content {
+  background: rgba(30, 30, 47, 0.95); /* dark background */
+  color: #f5f6fa; /* light text */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.dark-theme .tab-btn {
+  background: #444 !important;
+  color: #fff !important;
+}
+
+.dark-theme .tab-btn.active {
+  background: #56cc9d !important;
+  color: #000 !important;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Parina Garg</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="portofolio.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <h1>About Me</h1>
+
+  <section class="section-box" style="text-align:center">
+    <a href="profile.JPG" target="_blank">
+  <img src="profile.JPG" alt="Profile Picture" class="profile-img">
+</a>
+
+    <p><strong>Hi! I’m Parina Garg</strong>, a final-year Artifical Intelligence and Data Science Engineer with a strong passion for design, development, and cloud technologies. With hands-on experience in AWS, frontend tools, and creative platforms like Canva, I thrive at the intersection of technology and aesthetics. Whether it’s developing a website, designing a campaign, or automating a cloud deployment, I love bringing ideas to life in meaningful, colorful ways. Currently exploring career opportunities that allow me to contribute, learn, and grow as a tech-driven creative.</p>
+  </section>
+
+  <section class="section-box">
+    <h2>🎓 My Education</h2>
+    <p>I’m pursuing my Bachelor's in Artifical Intelligence and Data Science Engineer from <strong>Vivekananda Institute of Professional Studies</strong>. I've developed projects using HTML, CSS, JS, MongoDB, and AWS, and explored cloud computing, virtualization, and deployment using EC2 and Docker.</p>
+  </section>
+
+  <section class="section-box fun-facts">
+    <h2>✨ Fun Facts</h2>
+    <ul>
+  <li>🌈 I’m a big fan of vibrant UIs and believe color is code too.</li>
+  <li>☕ I can't function without my daily coffee dose (or three).</li>
+  <li>🌌 I love coding late at night—it's when I’m most creative.</li>
+  <li>🎨 My Canva skills? Let’s just say I’ve made team posters in record time.</li>
+  <li>🧠 I once built a cloud-hosted project on ROS and AWS EC2—no screen, no LEDs, just pure data!</li>
+  <li>💃 I’ve danced on stage and debugged code in the same day—balance!</li>
+  <li>🛠️ If there’s a new tech stack, I will try it—even if it breaks the first few times.</li>
+</ul>
+
+  </section>
+
+  <section class="section-box">
+    <h2>🎯 Interests</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="design">🎨 Design</button>
+      <button class="tab-btn" data-tab="tech">💻 Tech</button>
+      <button class="tab-btn" data-tab="hobbies">🌟 Hobbies</button>
+    </div>
+    <div class="tab-content active" id="design">With a creative eye and technical precision, I specialize in crafting visually engaging digital experiences. I am proficient with <strong>Canva</strong> for UI prototyping and design layouts, and I love playing with color palettes, typography, and modern trends to create user-friendly interfaces. My attention to detail and ability to balance aesthetic with function makes every project feel alive and intuitive.
+</div>
+    <div class="tab-content" id="tech">I bring hands-on experience in a range of technologies including <strong>AWS (EC2, S3, RDS), Linux (Ubuntu), ROS Noetic, Python, C/C++, SQL, MongoDB, and Tableau</strong>. From deploying scalable cloud infrastructures and automating tasks with CLI and Docker, to data analysis and AI integration, I enjoy solving real-world problems with smart, efficient solutions.</div>
+    <div class="tab-content" id="hobbies">Outside the tech world, I’m a creative at heart. I enjoy </strong>designing, volunteering, traveling,</strong> and engaging in expressive arts like <strong>dancing, singing, and painting</strong>. Whether it's brainstorming UI layouts or painting a new canvas, I love using my time to explore creativity and contribute meaningfully to communities.
+
+</div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Parina Garg. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle('dark-theme');
+      toggleBtn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    };
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

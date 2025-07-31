@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Parina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('bg.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      padding: 0;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    .dark-theme {
+      background: linear-gradient(135deg, #1e1e2f, #0f0f1b);
+      color: #f5f6fa;
+    }
+
+    .header {
+      background-color: #2f80ed;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 12px 12px;
+      animation: slideDown 0.7s ease-in-out;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a.active, .nav a:hover {
+      color: #ffd166;
+    }
+
+    #themeToggle {
+      background: white;
+      color: #2f80ed;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      background: #f0f0f0;
+    }
+
+    .resume {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease;
+    }
+
+    .dark-theme .resume {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #000;
+      text-shadow: 2px 2px 6px #ffffff, 0 0 12px #2f80ed;
+    }
+
+    .dark-theme h1 {
+      color: #fff;
+    }
+
+    .resume-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn, .btn-secondary {
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn {
+      background-color: #56cc9d;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: #6c5ce7;
+      color: white;
+    }
+
+    .btn:hover, .btn-secondary:hover {
+      transform: scale(1.05);
+    }
+
+    .resume-viewer iframe {
+      width: 100%;
+      height: 700px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resume-viewer iframe:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 20px rgba(47, 128, 237, 0.3);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      background-color: #2f80ed;
+      color: white;
+      border-radius: 12px 12px 0 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .resume-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Parina Garg</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="portofolio.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <section class="resume">
+    <h1>My Resume</h1>
+    <div class="resume-actions">
+      <a href="Parina_Garg_Resume.pdf.pdf" class="btn" target="_blank">📄 View Resume</a>
+      <a href="Parina_Garg_Resume.pdf.pdf" class="btn-secondary" download>⬇️ Download PDF</a>
+    </div>
+    <div class="resume-viewer">
+      <iframe src="Parina_Garg_Resume.pdf.pdf" title="Parina Garg Resume"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Parina Garg. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle('dark-theme');
+      toggleBtn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    };
+  </script>
+</body>
+</html>

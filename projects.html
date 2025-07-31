@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Parina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('bg.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      padding: 0;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .dark-theme {
+      background-color: #1e1e2f;
+      color: #f2f2f2;
+    }
+
+    /* Header with animation */
+    .header {
+      background-color: #2f80ed;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: slideDown 0.6s ease-in-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .dark-theme .header {
+      background-color: #2e2e2e;
+      color: #f2f2f2;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .dark-theme .nav a {
+      color: #f2f2f2;
+    }
+
+    .nav a.active {
+      text-decoration: underline;
+    }
+
+    #themeToggle {
+      background: #ffffff;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+      border-radius: 8px;
+      padding: 0.3rem 0.6rem;
+      transition: background 0.3s ease;
+    }
+
+    .dark-theme #themeToggle {
+      background: #444;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #000;
+      text-shadow:
+        2px 2px 6px #ffffff,
+        0 0 12px #2f80ed;
+      margin-bottom: 2rem;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .projects {
+      padding: 2rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, #ffffff, #f0f4f8);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .dark-theme .project-card {
+      background: linear-gradient(135deg, #2a2a3b, #1c1c2b);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.2rem;
+    }
+
+    .project-card h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .project-card h2 span {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #777;
+    }
+
+    .dark-theme .project-card h2 {
+      color: #f2f2f2;
+    }
+
+    .dark-theme .project-card h2 span {
+      color: #aaa;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .dark-theme .project-card p {
+      color: #ccc;
+    }
+
+    .highlight {
+      color: #2f80ed;
+      font-weight: 600;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      background-color: #2f80ed;
+      color: white;
+    }
+
+    .dark-theme .footer {
+      background-color: #2e2e2e;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Parina Garg</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="portofolio.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <section class="projects">
+    <h1>My Projects</h1>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="crash-detection.jpeg" alt="AI Car Crash Detection">
+        <div class="card-content">
+          <h2>AI-Powered Car Crash Detection <span>(Feb – Apr 2024)</span></h2>
+          <p>Real-time accident detection using deep learning and image annotation. Automated alerts triggered during impact events.</p>
+          <p class="highlight">★ Presented at IC-AMSI 2024</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Project.png" alt="Smart Parking System">
+        <div class="card-content">
+          <h2>Smart Car Parking System <span>(Sep – Nov 2024)</span></h2>
+          <p>Designed a two-level system that detects and displays real-time slot availability to optimize urban parking efficiency.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="deloitte.jpg" alt="Deloitte Analytics Simulation">
+        <div class="card-content">
+          <h2>Deloitte Analytics Simulation <span>(Jul 2025)</span></h2>
+          <p>Completed a virtual job simulation involving data classification, Excel modeling, and Tableau dashboard creation for insights.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="cloud-research.jpg" alt="Cloud Research">
+        <div class="card-content">
+          <h2>Cloud Infrastructure Optimization</h2>
+          <p>Researched sustainable cloud practices to reduce carbon emissions in social platforms.</p>
+          <p class="highlight">★ Presented at ICICC 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Parina Garg. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.onclick = () => {
+      document.body.classList.toggle('dark-theme');
+      toggleBtn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    };
+  </script>
+</body>
+</html>
